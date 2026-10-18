@@ -34,9 +34,9 @@ export const siteContent: SiteContent = {
     caption: 'The 2026 officers take their oath before CHED XI Regional Director Dr. Maricar Casquejo.',
   },
   commitments: [
-    { number: '01', icon: '↔', title: 'Strengthen collaboration', text: 'Bring teacher education institutions into purposeful dialogue and coordinated regional action.' },
-    { number: '02', icon: '✦', title: 'Advance quality', text: 'Support the continuing pursuit of strong, relevant, and responsive teacher education.' },
-    { number: '03', icon: '◎', title: 'Build partnerships', text: 'Connect member institutions with professional and public-sector partners serving education.' },
+    { number: '01', icon: 'I', title: 'Instruction', text: 'Strengthen instruction and teaching practice across Region XI.' },
+    { number: '02', icon: 'R', title: 'Research', text: 'Advance research that informs teacher education and regional needs.' },
+    { number: '03', icon: 'E', title: 'Extension', text: 'Expand extension and community partnerships that support educators and learners.' },
   ],
   officers: [
     { name: 'Dr. Ruby A. Serrano', role: 'President', image: '/media/SERRANO, RUBY A IMG_0136.webp', imageAlt: 'Portrait of Dr. Ruby A. Serrano', featured: true },

@@ -107,17 +107,18 @@ h1, h2, h3, p { margin-top: 0; }
 .feature-image__caption p { margin: 7px 0 0; font-family: var(--display); font-size: 1.07rem; line-height: 1.4; }
 
 .commitments { color: var(--white); background: var(--ink); }
-.commitments.section { padding-block: clamp(76px, 7vw, 104px); }
+.commitments.section { padding-block: clamp(56px, 5vw, 76px); }
 .section-title-row { display: grid; grid-template-columns: 1.2fr .7fr; gap: 70px; align-items: end; margin-bottom: 70px; }
-.commitments .section-title-row { gap: 42px; margin-bottom: 42px; }
+.commitments .section-title-row { grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr); gap: 24px; margin-bottom: 26px; }
+.commitments .section-title-row h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: 1.05; }
 .section-title-row h2 { color: var(--white); }
 .section-title-row > p { max-width: 450px; margin: 0 0 6px; color: #bfcbe0; }
 .commitment-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.18); }
-.commitment { position: relative; min-height: 290px; padding: 32px clamp(25px, 3vw, 44px); border-right: 1px solid rgba(255,255,255,.18); }
+.commitment { position: relative; min-height: 0; padding: 24px clamp(22px, 2.5vw, 36px); border-right: 1px solid rgba(255,255,255,.18); }
 .commitment:last-child { border-right: 0; }
 .commitment__number { color: #7182a2; font-size: .7rem; font-weight: 800; letter-spacing: .15em; }
-.commitment__icon { display: grid; width: 56px; height: 56px; place-items: center; margin: 32px 0 20px; border: 1px solid rgba(239,184,63,.45); border-radius: 50%; color: var(--gold); font-family: var(--display); font-size: 1.5rem; }
-.commitment h3 { margin-bottom: 13px; font-family: var(--display); font-size: clamp(1.4rem, 2.2vw, 2rem); font-weight: 500; }
+.commitment__icon { display: grid; width: 42px; height: 42px; place-items: center; margin: 16px 0 14px; border: 1px solid rgba(239,184,63,.45); border-radius: 50%; color: var(--gold); font-family: var(--display); font-size: 1.15rem; }
+.commitment h3 { margin-bottom: 9px; font-family: var(--display); font-size: clamp(1.3rem, 1.8vw, 1.65rem); font-weight: 500; }
 .commitment p { max-width: 310px; margin: 0; color: #bfcbe0; font-size: .93rem; }
 
 .leadership { overflow: hidden; background: var(--white); }
@@ -256,10 +257,11 @@ h1, h2, h3, p { margin-top: 0; }
   .feature-image > img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; }
   .feature-image__caption { position: relative; right: auto; bottom: auto; width: 100%; margin: 0; }
   .commitment-grid { grid-template-columns: 1fr; }
-  .commitments.section { padding-block: 58px; }
-  .commitments .section-title-row { gap: 20px; margin-bottom: 28px; }
-  .commitment { min-height: 0; padding: 24px 22px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
-  .commitment__icon { margin: 18px 0 14px; }
+  .commitments.section { padding-block: 42px; }
+  .commitments .section-title-row { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-bottom: 20px; }
+  .commitments .section-title-row h2 { font-size: clamp(2rem, 8vw, 2.8rem); }
+  .commitment { padding: 18px 14px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .commitment__icon { width: 36px; height: 36px; margin: 12px 0 10px; font-size: 1rem; }
   .officer-grid { grid-template-columns: repeat(2, 1fr); }
   .officer-card--president { grid-column: span 2; grid-row: auto; }
   .officer-card--president .officer-card__image { aspect-ratio: 4 / 5; }
