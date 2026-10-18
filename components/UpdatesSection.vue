@@ -15,7 +15,18 @@ defineProps<{ updates: UpdateItem[] }>()
           <div class="update-card__image"><img :src="update.image" :alt="update.imageAlt" loading="lazy"></div>
           <div class="update-card__body">
             <p class="meta"><time :datetime="update.date">{{ update.dateLabel }}</time> · {{ update.category }}</p>
-            <h3>{{ update.title }}</h3><p>{{ update.excerpt }}</p>
+            <h3>{{ update.title }}</h3>
+            <p>{{ update.excerpt }}</p>
+            <a
+              v-if="update.href"
+              class="update-card__link"
+              :href="update.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="`Read the official source for ${update.title}`"
+            >
+              Read official source <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </article>
       </div>
