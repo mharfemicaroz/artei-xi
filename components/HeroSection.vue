@@ -6,7 +6,9 @@ defineProps<{ hero: HeroContent; featuredUpdate: UpdateItem }>()
 
 <template>
   <section id="home" class="hero" aria-labelledby="hero-title">
-    <div class="hero__media" :style="{ backgroundImage: `url('${hero.image}')` }" role="img" aria-label="ARTEI XI leadership council" />
+    <div class="hero__media">
+      <img :src="hero.image" alt="ARTEI XI leadership council" width="1920" height="1280" fetchpriority="high" decoding="async">
+    </div>
     <div class="hero__overlay" />
     <div class="container hero__content">
       <div class="hero__copy reveal">

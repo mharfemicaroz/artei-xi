@@ -17,7 +17,7 @@ defineProps<{ about: AboutContent }>()
       </div>
     </div>
     <figure class="container feature-image reveal">
-      <img :src="about.image" :alt="about.imageAlt" width="1411" height="796" loading="lazy">
+      <img :src="about.image" :alt="about.imageAlt" width="1400" height="790" loading="lazy" decoding="async">
       <figcaption class="feature-image__caption">
         <span>Leadership in service</span><p>{{ about.caption }}</p>
       </figcaption>

@@ -5,7 +5,9 @@ defineProps<{ membership: MembershipContent; facebookUrl: string }>()
 
 <template>
   <section id="membership" class="membership">
-    <div class="membership__image" :style="{ backgroundImage: `url('${membership.image}')` }" />
+    <div class="membership__image">
+      <img :src="membership.image" alt="" loading="lazy" decoding="async">
+    </div>
     <div class="membership__panel reveal">
       <p class="eyebrow eyebrow--light">{{ membership.eyebrow }}</p>
       <h2>{{ membership.title }}</h2><p>{{ membership.text }}</p>

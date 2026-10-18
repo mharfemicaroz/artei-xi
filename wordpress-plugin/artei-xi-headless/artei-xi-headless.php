@@ -69,7 +69,10 @@ function artei_xi_image_payload(int $post_id): array {
     $image_id = get_post_thumbnail_id($post_id);
     if (!$image_id) return ['url' => '', 'alt' => ''];
     return [
-        'url' => (string) wp_get_attachment_image_url($image_id, 'full'),
+        'url' => (string) (
+            wp_get_attachment_image_url($image_id, 'large')
+            ?: wp_get_attachment_image_url($image_id, 'full')
+        ),
         'alt' => (string) get_post_meta($image_id, '_wp_attachment_image_alt', true),
     ];
 }

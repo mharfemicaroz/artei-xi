@@ -66,7 +66,8 @@ h1, h2, h3, p { margin-top: 0; }
 
 .hero { position: relative; min-height: min(840px, calc(100svh - 126px)); display: flex; align-items: flex-end; overflow: hidden; color: var(--white); background: var(--ink); }
 .hero__media, .hero__overlay { position: absolute; inset: 0; }
-.hero__media { background-position: center 32%; background-size: cover; transform: scale(1.015); animation: settle 1.4s ease-out both; }
+.hero__media { transform: scale(1.015); animation: settle 1.4s ease-out both; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
 .hero__overlay {
   background: linear-gradient(0deg, rgba(3,17,49,.36) 0%, transparent 28%);
 }
@@ -183,7 +184,8 @@ h1, h2, h3, p { margin-top: 0; }
 .update-card--archive .update-card__link { margin-top: auto; align-self: flex-start; }
 
 .membership { display: grid; min-height: 660px; grid-template-columns: 1.15fr .85fr; background: var(--ink); }
-.membership__image { min-height: 480px; background-position: center; background-size: cover; }
+.membership__image { position: relative; min-height: 480px; overflow: hidden; }
+.membership__image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .membership__panel { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(60px, 8vw, 120px); color: var(--white); background: linear-gradient(145deg, #0e3471, var(--ink)); }
 .membership h2 { margin-bottom: 25px; color: var(--white); font-size: clamp(2.5rem, 4.3vw, 4.6rem); }
 .membership__panel > p:not(.eyebrow) { max-width: 560px; margin-bottom: 32px; color: #d1dced; font-size: 1.05rem; }
@@ -239,7 +241,7 @@ h1, h2, h3, p { margin-top: 0; }
   .site-nav a { padding: 17px 0; border-bottom: 1px solid var(--line); font-family: var(--display); font-size: 1.5rem; font-weight: 500; }
   .site-nav a::after { display: none; }
   .hero { min-height: 780px; align-items: flex-start; }
-  .hero__media { background-position: 61% center; }
+  .hero__media img { object-position: 61% center; }
   .hero__overlay {
     background: linear-gradient(0deg, rgba(3,17,49,.4) 0%, transparent 32%);
   }

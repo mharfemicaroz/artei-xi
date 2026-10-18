@@ -11,7 +11,7 @@ useSeoMeta({
   description: () => site.value?.seo.description || 'The Association of Region XI Teacher Education Institutions strengthens collaboration and quality teacher education across Davao Region.',
   ogTitle: () => site.value?.seo.title,
   ogDescription: () => site.value?.seo.description,
-  ogImage: '/media/group.png',
+  ogImage: '/media/group.webp',
   ogType: 'website',
   twitterCard: 'summary_large_image',
 })
@@ -24,7 +24,7 @@ useHead({
       '@type': 'Organization',
       name: 'Association of Region XI Teacher Education Institutions',
       alternateName: 'ARTEI XI',
-      logo: '/media/logo.jpg',
+      logo: '/media/logo.webp',
       sameAs: ['https://www.facebook.com/profile.php?id=100075779097669'],
     }),
   }],

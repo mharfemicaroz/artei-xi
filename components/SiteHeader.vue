@@ -29,7 +29,7 @@ onMounted(() => {
   <header class="site-header" :class="{ 'is-scrolled': scrolled, 'menu-open': open }">
     <div class="container site-header__inner">
       <a class="brand" href="/" aria-label="ARTEI XI home" @click="closeMenu">
-        <img :src="'/media/logo.jpg'" alt="ARTEI XI seal" width="64" height="64">
+        <img :src="'/media/logo.webp'" alt="ARTEI XI seal" width="64" height="64" decoding="async">
         <span class="brand__copy">
           <strong>ARTEI <em>XI</em></strong>
           <small>Association of Region XI<br>Teacher Education Institutions</small>

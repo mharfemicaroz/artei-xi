@@ -20,7 +20,7 @@ useSeoMeta({
   description: 'Official news, regional assemblies, professional development activities, recognitions, and student events from ARTEI XI.',
   ogTitle: 'News & Events | ARTEI XI',
   ogDescription: 'Follow ARTEI XI activities advancing teacher education across Davao Region.',
-  ogImage: '/media/news/oath-taking-facebook.jpg',
+  ogImage: '/media/news/oath-taking-facebook.webp',
   ogType: 'website',
   twitterCard: 'summary_large_image',
 })
@@ -69,7 +69,7 @@ useSeoMeta({
           <div class="news-archive__grid" aria-live="polite">
             <article v-for="update in filteredUpdates" :key="`${update.date}-${update.title}`" class="update-card update-card--archive">
               <div class="update-card__image">
-                <img :src="update.image" :alt="update.imageAlt" loading="lazy">
+                <img :src="update.image" :alt="update.imageAlt" loading="lazy" decoding="async">
               </div>
               <div class="update-card__body">
                 <p class="meta"><time :datetime="update.date">{{ update.dateLabel }}</time> · {{ update.category }}</p>

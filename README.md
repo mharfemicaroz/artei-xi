@@ -25,7 +25,7 @@ npm run build
 - `server/api/site.get.ts` — server-side WordPress adapter with a safe local fallback.
 - `wordpress-plugin/artei-xi-headless/` — installable WordPress plugin for Leadership and ARTEI Updates.
 - `pics/` — original ARTEI XI source media and supplied information.
-- `public/media/` — deployable copies of the supplied image assets, served at `/media/*`.
+- `public/media/` — resized WebP images used by the site for faster downloads, served at `/media/*`; source materials remain in `pics/`.
 
 ## Connect WordPress later
 
