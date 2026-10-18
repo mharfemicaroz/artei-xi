@@ -84,7 +84,7 @@ function artei_xi_site_endpoint(): array {
     $update_posts = get_posts([
         'post_type'      => 'artei_update',
         'post_status'    => 'publish',
-        'posts_per_page' => 6,
+        'posts_per_page' => -1,
         'orderby'        => 'date',
         'order'          => 'DESC',
     ]);

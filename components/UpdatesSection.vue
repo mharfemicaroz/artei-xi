@@ -8,7 +8,7 @@ defineProps<{ updates: UpdateItem[] }>()
     <div class="container">
       <header class="section-title-row section-title-row--ink reveal">
         <div><p class="eyebrow">From the association</p><h2>Events &amp; updates</h2></div>
-        <a class="text-link" href="https://www.facebook.com/profile.php?id=100075779097669" target="_blank" rel="noopener">All official updates <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="/news">See all news &amp; events <span aria-hidden="true">→</span></a>
       </header>
       <div class="updates-grid">
         <article v-for="(update, index) in updates" :key="update.title" class="update-card reveal" :class="{ 'update-card--featured': index === 0 }">
@@ -29,6 +29,9 @@ defineProps<{ updates: UpdateItem[] }>()
             </a>
           </div>
         </article>
+      </div>
+      <div class="updates__more reveal">
+        <a class="button button--gold" href="/news">See all news &amp; events <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>

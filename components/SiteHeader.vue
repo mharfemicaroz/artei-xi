@@ -3,10 +3,12 @@ import type { NavigationItem, Organization } from '~/types/content'
 
 defineProps<{ organization: Organization; navigation: NavigationItem[] }>()
 
+const route = useRoute()
 const open = ref(false)
 const scrolled = ref(false)
 
 const closeMenu = () => { open.value = false }
+const resolveHref = (href: string) => route.path === '/' || !href.startsWith('#') ? href : `/${href}`
 
 onMounted(() => {
   const update = () => { scrolled.value = window.scrollY > 24 }
@@ -26,7 +28,7 @@ onMounted(() => {
   </div>
   <header class="site-header" :class="{ 'is-scrolled': scrolled, 'menu-open': open }">
     <div class="container site-header__inner">
-      <a class="brand" href="#home" aria-label="ARTEI XI home" @click="closeMenu">
+      <a class="brand" href="/" aria-label="ARTEI XI home" @click="closeMenu">
         <img :src="'/media/logo.jpg'" alt="ARTEI XI seal" width="64" height="64">
         <span class="brand__copy">
           <strong>ARTEI <em>XI</em></strong>
@@ -37,7 +39,7 @@ onMounted(() => {
         <span class="sr-only">Toggle navigation</span><span /><span /><span />
       </button>
       <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
-        <a v-for="item in navigation" :key="item.href" :href="item.href" @click="closeMenu">{{ item.label }}</a>
+        <a v-for="item in navigation" :key="item.href" :href="resolveHref(item.href)" @click="closeMenu">{{ item.label }}</a>
       </nav>
     </div>
   </header>
