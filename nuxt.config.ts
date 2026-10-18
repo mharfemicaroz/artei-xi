@@ -1,3 +1,8 @@
+const needsLocalNode23Workaround =
+  process.platform === 'win32'
+  && process.versions.node.startsWith('23.')
+  && !process.env.VERCEL
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
   devtools: { enabled: true },
@@ -21,12 +26,12 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    // Avoid a Node 23 / Windows readlink issue in the dependency tracer while
-    // keeping the production server build deterministic in this environment.
-    externals: {
-      inline: ['vue-bundle-renderer'],
-      trace: false,
-    },
+    // Node 23 on local Windows has a readlink bug in Nitro's dependency
+    // tracer. Vercel must always retain normal tracing so its function bundle
+    // includes every server dependency.
+    externals: needsLocalNode23Workaround
+      ? { inline: ['vue-bundle-renderer'], trace: false }
+      : undefined,
   },
   typescript: {
     // Type checking runs as a dedicated CI step (`npm run typecheck`). Keeping

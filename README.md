@@ -36,6 +36,14 @@ npm run build
 
 Nuxt requests `/wp-json/artei/v1/site`. Empty CMS sections retain the verified local fallback, allowing content to migrate gradually.
 
+## Vercel deployment
+
+Import the repository as a Nuxt project and keep the default `npm run build`
+command. The included `vercel.json` enables Nuxt framework detection. Do not
+override the output directory. Add `WORDPRESS_API_URL` only after the separate
+WordPress installation is online; without it, the verified local content is
+used automatically.
+
 ## Source notes
 
 The site uses no invented metrics, testimonials, addresses, fees, or member counts. Officer names, roles, ceremony facts, and association priorities are derived from `pics/info.txt`. Membership inquiries go to the supplied official Facebook page until ARTEI XI provides a formal registration route.
