@@ -1,0 +1,86 @@
+import type { SiteContent } from '~/types/content'
+
+export const siteContent: SiteContent = {
+  seo: {
+    title: 'ARTEI XI | Advancing Teacher Education in Davao Region',
+    description: 'The Association of Region XI Teacher Education Institutions brings institutions together to strengthen collaboration, professional partnerships, and quality teacher education.',
+  },
+  organization: {
+    shortName: 'ARTEI XI',
+    fullName: 'Association of Region XI Teacher Education Institutions',
+    region: 'Davao Region · Philippines',
+    facebookUrl: 'https://www.facebook.com/profile.php?id=100075779097669',
+  },
+  navigation: [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Leadership', href: '#leadership' },
+    { label: 'Events & News', href: '#updates' },
+    { label: 'Membership', href: '#membership' },
+    { label: 'Contact', href: '#contact' },
+  ],
+  hero: {
+    eyebrow: 'One region. One teaching community.',
+    title: 'Advancing teacher education in Region XI.',
+    text: 'Connecting institutions for stronger teacher preparation across Davao Region.',
+    image: '/media/group.png',
+  },
+  about: {
+    title: 'One region. A shared purpose.',
+    lede: 'The Association of Region XI Teacher Education Institutions is a regional community committed to stronger collaboration and quality teacher education.',
+    body: 'Working with member institutions and education stakeholders, ARTEI XI creates space for professional exchange, collective action, and partnerships that support teacher preparation throughout the Davao Region.',
+    image: '/media/oathtaking.jpg',
+    imageAlt: 'New ARTEI XI officers taking their oath at the CHED XI Regional Office',
+    caption: 'The 2026 officers take their oath before CHED XI Regional Director Dr. Maricar Casquejo.',
+  },
+  commitments: [
+    { number: '01', icon: '↔', title: 'Strengthen collaboration', text: 'Bring teacher education institutions into purposeful dialogue and coordinated regional action.' },
+    { number: '02', icon: '✦', title: 'Advance quality', text: 'Support the continuing pursuit of strong, relevant, and responsive teacher education.' },
+    { number: '03', icon: '◎', title: 'Build partnerships', text: 'Connect member institutions with professional and public-sector partners serving education.' },
+  ],
+  officers: [
+    { name: 'Dr. Ruby A. Serrano', role: 'President', image: '/media/SERRANO, RUBY A IMG_0136.JPG', imageAlt: 'Portrait of Dr. Ruby A. Serrano', featured: true },
+    { name: 'Dr. Armand James Vallejo', role: 'Vice President — Internal', image: '/media/VALLEJO, ARMAND JAMES IMG_0144.JPG', imageAlt: 'Portrait of Dr. Armand James Vallejo' },
+    { name: 'Dr. Donita May Valera', role: 'Vice President — External', image: '/media/VALERA, DONITA MAY IMG_0097.JPG', imageAlt: 'Portrait of Dr. Donita May Valera' },
+    { name: 'Dr. Jeanilyn T. Muico', role: 'Secretary', image: '/media/MUICO, JEANILYN T IMG_0102.JPG', imageAlt: 'Portrait of Dr. Jeanilyn T. Muico' },
+    { name: 'Dr. Charmaine V. Bañes', role: 'Assistant Secretary', image: '/media/BAÑES, CHARMAINE V IMG_0123.JPG', imageAlt: 'Portrait of Dr. Charmaine V. Bañes' },
+    { name: 'Dr. Ida Tudy', role: 'Treasurer', image: '/media/TUDY, IDA IMG_0111.JPG', imageAlt: 'Portrait of Dr. Ida Tudy' },
+    { name: 'Dr. Mharfe M. Micaroz', role: 'Assistant Treasurer', image: '/media/MICAROZ, MHARFE M IMG_0159.JPG', imageAlt: 'Portrait of Dr. Mharfe M. Micaroz' },
+    { name: 'Dr. Melanie Jeane C. Galvez', role: 'Auditor', image: '/media/GALVEZ, MELANIE JEANE C IMG_0299.JPG', imageAlt: 'Portrait of Dr. Melanie Jeane C. Galvez' },
+    { name: 'Dr. Albert G. Musico', role: 'Business Manager', image: '/media/MUSICO, ALBERT IMG_0082.JPG', imageAlt: 'Portrait of Dr. Albert G. Musico' },
+    { name: 'Dr. Arnel II S. Bernal', role: 'Public Information Officer', image: '/media/BERNAL, ARNEL II S IMG_0164.JPG', imageAlt: 'Portrait of Dr. Arnel II S. Bernal' },
+  ],
+  adviser: {
+    name: 'Dr. Evelyn S. Ecle',
+    role: 'Council Adviser',
+    image: '/media/ECLE, EVELYN IMG_0088.JPG',
+    imageAlt: 'Portrait of Dr. Evelyn S. Ecle',
+  },
+  updates: [
+    {
+      date: '2026-10-05',
+      dateLabel: 'October 5, 2026',
+      category: 'Leadership',
+      title: 'ARTEI XI welcomes its newly elected officers',
+      excerpt: 'The new leadership team formally took its oath at the CHED XI Regional Office, signaling a renewed commitment to regional collaboration and quality teacher education.',
+      image: '/media/oathtaking.jpg',
+      imageAlt: 'ARTEI XI 2026 leadership oath-taking ceremony',
+    },
+    {
+      date: '2026-10-05',
+      dateLabel: 'October 5, 2026',
+      category: 'Association',
+      title: 'A renewed regional partnership',
+      excerpt: 'ARTEI XI will work collectively with member institutions and stakeholders on initiatives that strengthen teacher education throughout Region XI.',
+      image: '/media/banner.jpg',
+      imageAlt: 'ARTEI XI and CHED XI institutional marks',
+    },
+  ],
+  membership: {
+    eyebrow: 'Institutional community',
+    title: 'Move teacher education forward with Region XI.',
+    text: 'ARTEI XI connects deans, program heads, teacher educators, member institutions, and education partners through a shared regional platform.',
+    note: 'Official membership details and announcements are issued through ARTEI XI’s official channels.',
+    image: '/media/group.png',
+  },
+}

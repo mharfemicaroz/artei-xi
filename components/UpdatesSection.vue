@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import type { UpdateItem } from '~/types/content'
+defineProps<{ updates: UpdateItem[] }>()
+</script>
+
+<template>
+  <section id="updates" class="updates section">
+    <div class="container">
+      <header class="section-title-row section-title-row--ink reveal">
+        <div><p class="eyebrow">From the association</p><h2>Events &amp; updates</h2></div>
+        <a class="text-link" href="https://www.facebook.com/profile.php?id=100075779097669" target="_blank" rel="noopener">All official updates <span aria-hidden="true">↗</span></a>
+      </header>
+      <div class="updates-grid">
+        <article v-for="(update, index) in updates" :key="update.title" class="update-card reveal" :class="{ 'update-card--featured': index === 0 }">
+          <div class="update-card__image"><img :src="update.image" :alt="update.imageAlt" loading="lazy"></div>
+          <div class="update-card__body">
+            <p class="meta"><time :datetime="update.date">{{ update.dateLabel }}</time> · {{ update.category }}</p>
+            <h3>{{ update.title }}</h3><p>{{ update.excerpt }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</template>
