@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { UpdateItem } from '~/types/content'
+import { newsPath } from '~/utils/news'
 defineProps<{ updates: UpdateItem[] }>()
 </script>
 
@@ -15,11 +16,14 @@ defineProps<{ updates: UpdateItem[] }>()
           <div class="update-card__image"><img :src="update.image" :alt="update.imageAlt" loading="lazy" decoding="async"></div>
           <div class="update-card__body">
             <p class="meta"><time :datetime="update.date">{{ update.dateLabel }}</time> · {{ update.category }}</p>
-            <h3>{{ update.title }}</h3>
+            <h3><NuxtLink :to="newsPath(update)">{{ update.title }}</NuxtLink></h3>
             <p>{{ update.excerpt }}</p>
+            <NuxtLink class="update-card__link" :to="newsPath(update)" :aria-label="`Read ${update.title}`">
+              Read story <span aria-hidden="true">→</span>
+            </NuxtLink>
             <a
               v-if="update.href"
-              class="update-card__link"
+              class="update-card__source"
               :href="update.href"
               target="_blank"
               rel="noopener noreferrer"
