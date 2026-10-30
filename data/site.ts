@@ -16,8 +16,24 @@ export const siteContent: SiteContent = {
     { label: 'About', href: '#about' },
     { label: 'Leadership', href: '#leadership' },
     { label: 'Events & News', href: '/news' },
+    {
+      label: 'Resources',
+      href: '/resources',
+      children: [
+        { label: 'Research Papers', href: '/resources/research-papers' },
+        { label: 'Articles', href: '/resources/articles' },
+        { label: 'Presentations', href: '/resources/presentations' },
+      ],
+    },
+    {
+      label: 'ARTEI Journal of Education',
+      href: '/journal',
+      children: [
+        { label: 'Submission Guidelines', href: '/journal/submission-guidelines' },
+        { label: 'Archive', href: '/journal/archive' },
+      ],
+    },
     { label: 'Membership', href: '#membership' },
-    { label: 'Contact', href: '#contact' },
   ],
   hero: {
     eyebrow: 'One region. One teaching community.',

@@ -43,7 +43,17 @@ export default defineNuxtConfig({
       ? { inline: ['vue-bundle-renderer'], trace: false }
       : undefined,
     prerender: {
-      routes: ['/news', ...siteContent.updates.map(update => newsPath(update))],
+      routes: [
+        '/news',
+        '/resources',
+        '/resources/research-papers',
+        '/resources/articles',
+        '/resources/presentations',
+        '/journal',
+        '/journal/submission-guidelines',
+        '/journal/archive',
+        ...siteContent.updates.map(update => newsPath(update)),
+      ],
       crawlLinks: true,
     },
   },
