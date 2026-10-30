@@ -20,6 +20,10 @@ useSeoMeta({ title: 'Resources | ARTEI XI', description: 'Research papers, pract
       <section class="resource-index section">
         <div class="container">
           <p class="demo-note"><strong>Demonstration library.</strong> Files and records on these pages are placeholders for the future ARTEI XI repository.</p>
+          <NuxtLink class="modelo-feature" to="/resources/project-modelo">
+            <div class="modelo-feature__mark" aria-hidden="true"><span>M</span><i>LET</i></div>
+            <div><p class="eyebrow">Featured learning initiative</p><h2>Project MODELO</h2><p>A curated review shelf for future professional teachers—organized by subject area and designed for focused, independent study.</p><strong>Explore LET review materials <span aria-hidden="true">→</span></strong></div>
+          </NuxtLink>
           <div class="resource-index__grid">
             <NuxtLink v-for="(collection, index) in collections" :key="collection.slug" class="collection-card" :to="`/resources/${collection.slug}`">
               <span>0{{ index + 1 }}</span><p>{{ collection.eyebrow }}</p><h2>{{ collection.title }}</h2><p>{{ collection.intro }}</p><strong>Browse collection →</strong>

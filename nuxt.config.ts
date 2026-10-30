@@ -46,6 +46,7 @@ export default defineNuxtConfig({
       routes: [
         '/news',
         '/resources',
+        '/resources/project-modelo',
         '/resources/research-papers',
         '/resources/articles',
         '/resources/presentations',

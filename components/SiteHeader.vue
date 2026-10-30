@@ -51,7 +51,7 @@ onMounted(() => {
               :aria-expanded="expanded === item.label"
               :aria-label="`Toggle ${item.label} menu`"
               @click="toggleGroup(item.label)"
-            ><span aria-hidden="true">⌄</span></button>
+            ><span aria-hidden="true" /></button>
           </div>
           <div v-if="item.children" class="nav-dropdown">
             <a v-for="child in item.children" :key="child.href" :href="resolveHref(child.href)" @click="closeMenu">{{ child.label }}</a>

@@ -20,6 +20,7 @@ export const siteContent: SiteContent = {
       label: 'Resources',
       href: '/resources',
       children: [
+        { label: 'Project MODELO', href: '/resources/project-modelo' },
         { label: 'Research Papers', href: '/resources/research-papers' },
         { label: 'Articles', href: '/resources/articles' },
         { label: 'Presentations', href: '/resources/presentations' },
